@@ -1,7 +1,6 @@
 {
   debug_output = "on";
   position = "top";
-  display = "main";
   height = 24;
   title = "on";
   spaces = "on";
