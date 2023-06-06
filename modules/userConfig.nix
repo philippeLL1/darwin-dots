@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
 
   home.packages = import ./userPackages.nix pkgs;
@@ -23,6 +23,12 @@
   manual.manpages.enable = false;
 
 
+  # git stuff 
+  # TODO: put in another file
+  programs.git = {
+    userName = "philippeLL1";
+    userEmail = "philippelouislatour@gmail.com";
+  };
   programs.tmux.enable = true;
   home.stateVersion = "23.05";
   programs.home-manager.enable = true;
