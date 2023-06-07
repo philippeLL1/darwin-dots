@@ -10,6 +10,7 @@
     devenv.url = "github:cachix/devenv/latest";
     spacebar.url = "github:cmacrae/spacebar/v1.4.0";
     firefox.url = "github:mozilla/nixpkgs-mozilla";
+    firefox.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, darwin, haumea, devenv, spacebar, nixpkgs-mozilla, ... }: {
