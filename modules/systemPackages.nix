@@ -12,5 +12,10 @@
     lua
     cachix
     devenv.defaultPackage.${pkgs.system}
+
+    # services
+    spacebar
+    yabai
+    skhd
   ];
 }

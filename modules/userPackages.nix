@@ -6,6 +6,7 @@ pkgs: with pkgs; [
   emacs
   emacsPackages.doom
   wezterm
+  
   # tui
   fzf
   bottom
@@ -53,9 +54,6 @@ pkgs: with pkgs; [
   neofetch
 
   # services
-  yabai
-  skhd
-  spacebar
   karabiner-elements
   # fonts
   nerdfonts

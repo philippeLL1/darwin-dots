@@ -25,11 +25,11 @@
     # Tabs
     bufferline-nvim
     # Smooth scrolling
-    vim-smoothie
-
+    glow-nvim
     # ui
     noice-nvim
 
+    neoscroll-nvim
     # colorschemes
     oxocarbon-nvim
 

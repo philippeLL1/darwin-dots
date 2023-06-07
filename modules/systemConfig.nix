@@ -58,6 +58,7 @@
     enable = true;
     package = pkgs.spacebar;
     config = import ./configs/spacebar.nix;
+    extraConfig = "spacebar";
   };
   services.yabai = {
     enable = true;
@@ -88,6 +89,7 @@
   programs.zsh.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # launch agents
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;

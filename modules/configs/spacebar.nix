@@ -32,5 +32,5 @@
   clock_format = ''"%d/%m/%y %R"'';
   right_shell = "on";
   right_shell_icon = "";
-  right_shell_command = "whoami";
+  # right_shell_command = "whoami";
 }

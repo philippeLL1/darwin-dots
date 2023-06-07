@@ -22,7 +22,6 @@
   # prevents nix-darwin from building if set to true
   manual.manpages.enable = false;
 
-
   # git stuff 
   # TODO: put in another file
   programs.git = {
@@ -31,8 +30,7 @@
   };
   programs.tmux.enable = true;
   home.stateVersion = "23.05";
+
   programs.home-manager.enable = true;
 
 }
-
-

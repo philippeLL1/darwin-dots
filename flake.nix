@@ -6,17 +6,13 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    haumea = {
-      url = "github:nix-community/haumea/v0.2.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    haumea.url = "github:nix-community/haumea/v0.2.2";
     devenv.url = "github:cachix/devenv/latest";
     spacebar.url = "github:cmacrae/spacebar/v1.4.0";
-    spacebar.inputs.nixpkgs.follows = "nixpkgs";
+    firefox.url = "github:mozilla/nixpkgs-mozilla";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, haumea, devenv, spacebar, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, darwin, haumea, devenv, spacebar, nixpkgs-mozilla, ... }: {
 
     darwinConfigurations."darwin-devel" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
@@ -33,6 +29,7 @@
           {
             nixpkgs.overlays = [
               spacebar.overlay.aarch64-darwin
+              nixpkgs-mozilla.overlay
             ];
           }
 
@@ -43,7 +40,7 @@
           #   user
           home-manager.darwinModules.home-manager
           {
-            home-manager.useGlobalPkgs = false;
+            home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             # TODO: put in separate file
             homebrew = {
@@ -57,12 +54,15 @@
               casks = [
                 "qutebrowser"
                 "karabiner-elements"
+                "firefox"
+                "obs"
               ];
             };
             home-manager.users.drawer = import modules.userConfig;
           }
         ];
-      inputs = { inherit devenv; };
+      inputs = { inherit darwin devenv nixpkgs; };
     };
+  darwinPackages = self.darwinConfigurations."darwin-devel".pkgs;
   };
 }
