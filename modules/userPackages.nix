@@ -47,6 +47,7 @@ pkgs: with pkgs; [
   pyright
   sqlite
   nodejs
+  perl536Packages.TermReadKey
 
   # theming
   starship
