@@ -6,7 +6,7 @@ pkgs: with pkgs; [
   emacs
   emacsPackages.doom
   wezterm
-  
+  reaper 
   # tui
   fzf
   bottom
