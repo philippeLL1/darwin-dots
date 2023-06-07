@@ -72,7 +72,7 @@
   };
 
   # Auto upgrade nix package and the daemon service.
-  nix.package = pkgs.nixUnstable;
+#  nix.package = pkgs.nixUnstable;
   services.nix-daemon.enable = true;
 
   environment.variables = {

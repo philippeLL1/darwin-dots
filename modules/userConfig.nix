@@ -20,7 +20,7 @@
   };
 
   # prevents nix-darwin from building if set to true
-  manual.manpages.enable = false;
+  manual.manpages.enable = true;
 
   # git stuff 
   # TODO: put in another file
