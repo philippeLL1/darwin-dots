@@ -42,7 +42,7 @@
 
   launchd.user.agents.spacebar.serviceConfig.StandardErrorPath = "/tmp/spacebar.err.log";
   launchd.user.agents.spacebar.serviceConfig.StandardOutPath = "/tmp/spacebar.out.log";
-
+  launchd.user.agents.myspacebar.command = "spacebar";
   # trackpad gestures
   system.defaults.trackpad.TrackpadThreeFingerDrag = true;
   # system.defaults.universalaccess = {
@@ -52,13 +52,12 @@
 
   # spaces
   system.defaults.dock.mru-spaces = false;
-
+  
   # services
   services.spacebar = {
     enable = true;
     package = pkgs.spacebar;
     config = import ./configs/spacebar.nix;
-    extraConfig = "spacebar";
   };
   services.yabai = {
     enable = true;
