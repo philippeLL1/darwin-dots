@@ -13,12 +13,9 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +11 init.lua
-badd +8 configs/treesitter-config.lua
-badd +3 configs/lspconfig.lua
-badd +1 configs/init.lua
-badd +1 configs/lsp-config.lua
-badd +10 configs/which-key-config.lua
+badd +4 init.lua
+badd +11 configs/treesitter-config.lua
+badd +5 configs/lspconfig.lua
 argglobal
 %argdel
 $argadd init.lua
@@ -29,10 +26,6 @@ set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
 wincmd w
 wincmd _ | wincmd |
 split
@@ -59,17 +52,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 11 - ((10 * winheight(0) + 13) / 26)
+let s:l = 4 - ((3 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 11
+keepjumps 4
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("configs/init.lua", ":p")) | buffer configs/init.lua | else | edit configs/init.lua | endif
+if bufexists(fnamemodify("configs/treesitter-config.lua", ":p")) | buffer configs/treesitter-config.lua | else | edit configs/treesitter-config.lua | endif
 if &buftype ==# 'terminal'
-  silent file configs/init.lua
+  silent file configs/treesitter-config.lua
 endif
 balt init.lua
 setlocal fdm=manual
@@ -82,58 +75,35 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 13) / 26)
+let s:l = 11 - ((10 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 025|
-wincmd w
-argglobal
-if bufexists(fnamemodify("configs/which-key-config.lua", ":p")) | buffer configs/which-key-config.lua | else | edit configs/which-key-config.lua | endif
-if &buftype ==# 'terminal'
-  silent file configs/which-key-config.lua
-endif
-balt configs/treesitter-config.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 13) / 26)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 10
-normal! 050|
-wincmd w
-argglobal
-if bufexists(fnamemodify("configs/lsp-config.lua", ":p")) | buffer configs/lsp-config.lua | else | edit configs/lsp-config.lua | endif
-if &buftype ==# 'terminal'
-  silent file configs/lsp-config.lua
-endif
-balt configs/treesitter-config.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 13) / 26)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
+keepjumps 11
 normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("configs/lspconfig.lua", ":p")) | buffer configs/lspconfig.lua | else | edit configs/lspconfig.lua | endif
+if &buftype ==# 'terminal'
+  silent file configs/lspconfig.lua
+endif
+balt configs/treesitter-config.lua
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 5 - ((4 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 5
+normal! 047|
 wincmd w
 3wincmd w
 wincmd =
@@ -152,7 +122,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

@@ -1,0 +1,5 @@
+require'treesitter-config'
+require'lsp-config'
+require'neoscroll-config'
+require'which-key-config'
+require'vim-options'
