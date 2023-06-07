@@ -9,11 +9,9 @@
     haumea.url = "github:nix-community/haumea/v0.2.2";
     devenv.url = "github:cachix/devenv/latest";
     spacebar.url = "github:cmacrae/spacebar/v1.4.0";
-    firefox.url = "github:mozilla/nixpkgs-mozilla/master";
-    firefox.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, darwin, haumea, devenv, spacebar, nixpkgs-mozilla, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, darwin, haumea, devenv, spacebar, ... }: {
 
     darwinConfigurations."darwin-devel" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
@@ -30,7 +28,6 @@
           {
             nixpkgs.overlays = [
               spacebar.overlay.aarch64-darwin
-              nixpkgs-mozilla.overlay
             ];
           }
 
