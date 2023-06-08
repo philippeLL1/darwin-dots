@@ -37,6 +37,7 @@
           };
           hm = haumea.lib.load {
             src = ./modules;
+            loader = haumea.lib.loaders.verbatim;
           };
         in
         [
