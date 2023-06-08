@@ -9,9 +9,22 @@
     haumea.url = "github:nix-community/haumea/v0.2.2";
     devenv.url = "github:cachix/devenv/latest";
     spacebar.url = "github:cmacrae/spacebar/v1.4.0";
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, darwin, haumea, devenv, spacebar, ... }: {
+  outputs = inputs@{ 
+    self, 
+    nixpkgs, 
+    home-manager, 
+    darwin, 
+    haumea, 
+    devenv, 
+    spacebar, 
+    nix-doom-emacs,
+    ... 
+  }: 
+
+  {
 
     darwinConfigurations."darwin-devel" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
@@ -57,11 +70,11 @@
                 "reaper"
               ];
             };
-            home-manager.users.drawer = import modules.userConfig;
+            home-manager.users.drawer = import modules.userConfig nix-doom-emacs;
           }
         ];
-      inputs = { inherit darwin devenv nixpkgs; };
+        # extra inputs to be passed to home-manager
+      inputs = { inherit darwin devenv nixpkgs ; };
     };
-  darwinPackages = self.darwinConfigurations."darwin-devel".pkgs;
   };
 }

@@ -3,12 +3,10 @@ pkgs: with pkgs; [
   kitty
   kitty-themes
   karabiner-elements
-  emacs
   wezterm
   gimp
 
   # emacs
-  emacsPackages.doom
 
   # tui
   fzf

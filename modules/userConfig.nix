@@ -1,9 +1,15 @@
-{ pkgs, ... }:
+{ pkgs, nix-doom-emacs, ... }:
 {
+  import = [ nix-doom-emacs.hmModule ];
+  programs.doom-emacs = {
+    enable = true;
+    doomPrivateDir = ./doom.d;
+  };
 
   home.packages = import ./userPackages.nix pkgs;
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+  
 
   # shells
   programs.bash.enable = true;
