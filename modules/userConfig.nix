@@ -8,17 +8,17 @@
   };
 
   # direnv
-  home.packages = import ./userPackages.nix pkgs;
+  home.packages = configModules.userPackages pkgs;
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   
   # shells
   programs.bash.enable = true;
   programs.zsh = configModules.configs.shells.zsh pkgs;
-  programs.fish = import ./configs/shells/fish.nix pkgs;
+  programs.fish = configModules.configs.shells.fish pkgs;
 
   programs.wezterm.enable = true;
-  programs.wezterm.extraConfig = builtins.readFile ./configs/wezterm.lua;
+  programs.wezterm.extraConfig = builtins.readFile ../dotfiles/wezterm/wezterm.lua;
 
   # neovim
   programs.neovim = configModules.configs.nvim pkgs;
@@ -26,7 +26,6 @@
     source = ../dotfiles/neovim;
     recursive = true;
   };
-
 
   # emacs
   programs.emacs.enable = true;
@@ -40,6 +39,7 @@
     userName = "philippeLL1";
     userEmail = "philippelouislatour@gmail.com";
   };
+
   programs.tmux.enable = true;
   home.stateVersion = "23.05";
 
