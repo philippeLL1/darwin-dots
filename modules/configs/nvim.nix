@@ -55,5 +55,9 @@
     statix
     # lua
     lua-language-server
+    # typescript
+    typescript-nvim
+    # rust
+    rust-analyzer
   ];
 }
