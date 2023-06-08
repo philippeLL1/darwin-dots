@@ -21,9 +21,9 @@
   programs.wezterm.extraConfig = builtins.readFile ./configs/wezterm.lua;
 
   # neovim
-  programs.neovim = import ./configs/nvim.nix pkgs;
+  programs.neovim = configModules.configs.nvim pkgs;
   xdg.configFile.nvim = {
-    source = ./configs/neovim;
+    source = ../dotfiles/neovim;
     recursive = true;
   };
 
