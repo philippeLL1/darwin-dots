@@ -34,7 +34,7 @@ pkgs: with pkgs; [
   rustc
   cargo
   nixpkgs-fmt
-  # lua
+  lua
   go
   cmake
   ghc
