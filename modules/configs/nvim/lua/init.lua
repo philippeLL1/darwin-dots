@@ -1,2 +1,2 @@
-require'plugins'
+require'./plugins.lua'
 require'configs'
