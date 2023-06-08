@@ -4,8 +4,13 @@ pkgs: with pkgs; [
   kitty-themes
   karabiner-elements
   emacs
-  emacsPackages.doom
   wezterm
+  gimp
+  reaper
+
+  # emacs
+  emacsPackages.doom
+
   # tui
   fzf
   bottom
