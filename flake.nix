@@ -37,39 +37,22 @@
           };
         in
         [
-          # TODO: Put in a separate file
-          {
-            nixpkgs.overlays = [
-              spacebar.overlay.aarch64-darwin
-            ];
-          }
 
           { _module.args = inputs; }
+
           # 󰣖  system
           modules.systemPackages
           modules.systemConfig
+
           #   user
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+
             # TODO: put in separate file
-            homebrew = {
-              enable = true;
-              # onActivation.autoUpdate = true;
-              # updates homebrew packages on activation,
-              # can make darwin-rebuild much slower (otherwise i'd forget to do it ever though)
-              brews = [
-                "jp2a"
-              ];
-              casks = [
-                "qutebrowser"
-                "karabiner-elements"
-                "firefox"
-                "obs"
-                "reaper"
-              ];
-            };
+            homebrew = modules.homebrew;
+              
             home-manager.users.drawer = import modules.userConfig;
             home-manager.extraSpecialArgs = { nix-doom-emacs = nix-doom-emacs; };
           }

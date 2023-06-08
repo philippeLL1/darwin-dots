@@ -1,4 +1,7 @@
-{ pkgs, devenv, ... }: {
+{ pkgs, devenv, spacebar, ... }: 
+{
+  nixpkgs.overlays = [ spacebar.overlay.aarch64-darwin ];
+          
   environment.systemPackages = with pkgs; [
     # editors
     vim

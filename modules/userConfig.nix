@@ -18,7 +18,7 @@
   programs.fish = import ./configs/shells/fish.nix pkgs;
 
   programs.wezterm.enable = true;
-  programs.wezterm.extraConfig = import ./configs/wezterm.lua;
+  programs.wezterm.extraConfig = builtins.readFile ./configs/wezterm.lua;
 
   # neovim
   programs.neovim = import ./configs/nvim.nix pkgs;
