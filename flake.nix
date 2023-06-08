@@ -70,7 +70,8 @@
                 "reaper"
               ];
             };
-            home-manager.users.drawer = import modules.userConfig nix-doom-emacs;
+            home-manager.users.drawer = import modules.userConfig;
+            home-manager.extraSpecialArgs = [ nix-doom-emacs ];
           }
         ];
         # extra inputs to be passed to home-manager
