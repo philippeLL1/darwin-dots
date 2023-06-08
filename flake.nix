@@ -35,11 +35,6 @@
             src = ./modules;
             loader = haumea.lib.loaders.verbatim;
           };
-          # load all dotfiles
-          dotfiles = haumea.lib.load {
-            src = ./dotfiles;
-            loader = haumea.lib.matchers.always;
-          };
         in
         [
 
