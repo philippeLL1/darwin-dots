@@ -1,10 +1,10 @@
-{ pkgs, nix-doom-emacs, configModules, ... }:
+{ pkgs, nix-doom-emacs, configModules, dots, ... }:
 {
   imports = [ nix-doom-emacs.hmModule ];
   # doom emacs
   programs.doom-emacs = {
     enable = true;
-    doomPrivateDir = ./configs/doom;
+    doomPrivateDir = dots.doom;
   };
 
   # direnv

@@ -30,10 +30,15 @@
       system = "aarch64-darwin";
       modules =
         let
-          # recursively load all nix module files
+          # load all nix module files
           configModules = haumea.lib.load {
             src = ./modules;
             loader = haumea.lib.loaders.verbatim;
+          };
+          # load all dotfiles
+          dotfiles = haumea.lib.load {
+            src = ./dotfiles;
+            loader = haumea.lib.matchers.always;
           };
         in
         [
