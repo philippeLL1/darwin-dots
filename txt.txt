@@ -1,1 +1,0 @@
-/nix/store/xfcsh262jqrd3lq7wf4s98isvfxfms3l-luajit-2.1.0-2022-10-04-env/share/lua/5.1/?.lua;/nix/store/xfcsh262jqrd3lq7wf4s98isvfxfms3l-luajit-2.1.0-2022-10-04-env/share/lua/5.1/?/init.lua;/Users/drawer/.config/nvim/lua/

@@ -5,6 +5,7 @@
   vimdiffAlias = true;
 
   plugins = with pkgs.vimPlugins; [
+
     # lsp
     vim-nix
     nvim-lspconfig
@@ -15,7 +16,7 @@
     nvim-treesitter.withAllGrammars
 
     # status bar
-    feline-nvim
+    lualine-nvim
 
     # Auto close
     nvim-autopairs
@@ -26,15 +27,20 @@
     # Diagnostics window
     trouble-nvim
 
-    # Better native input/select windows
-    dressing-nvim
     # Tabs
     bufferline-nvim
-    # Smooth scrolling
-    glow-nvim
+
     # ui
+    nui-nvim
+    nvim-notify
     noice-nvim
+    nvim-web-devicons
+
+    # better scrolling
     neoscroll-nvim
+
+    # markdown reader/renderer
+    glow-nvim
 
     # colorschemes
     oxocarbon-nvim
