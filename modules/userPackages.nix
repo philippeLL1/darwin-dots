@@ -20,7 +20,7 @@ pkgs: with pkgs; [
   fd
   jq
   bat
-  bat-extras.batman
+#  bat-extras.batman
   bat-extras.batdiff
   bat-extras.batgrep
   bat-extras.batpipe
@@ -47,7 +47,6 @@ pkgs: with pkgs; [
   pyright
   sqlite
   nodejs
-  perl536Packages.TermReadKey
 
   # theming
   starship

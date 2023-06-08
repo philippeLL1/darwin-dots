@@ -9,17 +9,23 @@
     vim-nix
     nvim-lspconfig
     
+    # completion
+    coq_nvim
     # Syntax highlighting
     nvim-treesitter.withAllGrammars
 
     # status bar
     feline-nvim
+
     # Auto close
     nvim-autopairs
-    # Fuzzy finder window
+
+    # Fuzzy finder 
     telescope-nvim
+
     # Diagnostics window
     trouble-nvim
+
     # Better native input/select windows
     dressing-nvim
     # Tabs
@@ -28,8 +34,8 @@
     glow-nvim
     # ui
     noice-nvim
-
     neoscroll-nvim
+
     # colorschemes
     oxocarbon-nvim
 
