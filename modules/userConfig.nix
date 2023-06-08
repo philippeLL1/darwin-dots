@@ -19,6 +19,9 @@
     recursive = true;
   };
 
+  # emacs
+  programs.emacs.enable = true;
+
   # prevents nix-darwin from building if set to true
   manual.manpages.enable = false;
 

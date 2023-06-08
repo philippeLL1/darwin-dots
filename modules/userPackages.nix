@@ -6,7 +6,6 @@ pkgs: with pkgs; [
   emacs
   wezterm
   gimp
-  reaper
 
   # emacs
   emacsPackages.doom
@@ -52,6 +51,8 @@ pkgs: with pkgs; [
   pyright
   sqlite
   nodejs
+  clang
+  coreutils
 
   # theming
   starship

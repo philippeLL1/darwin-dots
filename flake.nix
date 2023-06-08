@@ -54,6 +54,7 @@
                 "karabiner-elements"
                 "firefox"
                 "obs"
+                "reaper"
               ];
             };
             home-manager.users.drawer = import modules.userConfig;
