@@ -13,8 +13,13 @@
     
     # completion
     coq_nvim
+    coq-artifacts
+
     # Syntax highlighting
     nvim-treesitter.withAllGrammars
+
+    # mappings
+    which-key-nvim
 
     # status bar
     lualine-nvim
@@ -24,6 +29,7 @@
 
     # Fuzzy finder 
     telescope-nvim
+    telescope-symbols-nvim
 
     # Diagnostics window
     trouble-nvim
@@ -45,8 +51,13 @@
 
     # colorschemes
     oxocarbon-nvim
+    kanagawa-nvim
+    catppuccin-nvim
+    gruvbox-nvim
+    material-nvim
+    melange-nvim
+    monokai-pro-nvim
 
-    which-key-nvim
   ];
 
   extraPackages = with pkgs; [

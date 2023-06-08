@@ -1,13 +1,14 @@
 local wk = require"which-key"
 wk.setup{}
 wk.register({
-  ["<leader>f"] = { name = "+file" },
-  ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find File" },
-  ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-  ["<leader>fn"] = { "<cmd>enew<cr>", "New File" },
-  ["<ESC>"] = { "<C-\\><C-n>", "Escape from terminal input mode" },
-  ["<C-h>"] = { "<C-w>h", "Focus window leftwards" },
-  ["<C-j>"] = { "<C-w>j", "Focus window downwards" },
-  ["<C-k>"] = { "<C-w>k", "Focus window upwards" },
-  ["<C-l>"] = { "<C-w>l", "Focus window rightwards" },
-})
+  t = {
+	  name = "Telescope Pickers",
+	  f = { "<cmd>Telescope find_files<cr>", "Find File" },
+	  h = { "<cmd>Telescope colorscheme<cr>", "Choose theme" },
+	  m = { "<cmd>Telescope man_pages<cr>", "Open man page" },
+	  p = { "<cmd>Telescope planets<cr>", "Planets!" },
+	  b = { "<cmd>Telescope buffers<cr>", "Select buffer" },
+	  g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
+	  s = { "<cmd>Telescope symbols<cr>", "Insert symbol" },
+  },
+}, { prefix = "<leader>" })

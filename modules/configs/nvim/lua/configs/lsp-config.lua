@@ -6,4 +6,3 @@ lspconfig.tsserver.setup(coq.lsp_ensure_capabilities())
 lspconfig.rust_analyzer.setup(coq.lsp_ensure_capabilities())
 lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities())
 lspconfig.nil_ls.setup(coq.lsp_ensure_capabilities())
-
