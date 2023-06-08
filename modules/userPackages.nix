@@ -7,7 +7,6 @@ pkgs: with pkgs; [
   gimp
 
   # emacs
-  emacsPackages.evil-collection
 
   # tui
   fzf

@@ -15,9 +15,10 @@
   mouse_action1 = "move";
   mouse_action2 = "resize";
   layout = "bsp";
-  top_padding = 28;
-  bottom_padding = 4;
-  left_padding = 4;
-  right_padding = 4;
-  window_gap = 4;
+  external_bar = "all:24:0";
+  top_padding = 2;
+  bottom_padding = 2;
+  left_padding = 2;
+  right_padding = 2;
+  window_gap = 0;
 }
