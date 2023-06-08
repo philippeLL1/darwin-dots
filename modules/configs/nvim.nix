@@ -9,6 +9,7 @@
     # lsp
     vim-nix
     nvim-lspconfig
+    typescript-nvim
     
     # completion
     coq_nvim
@@ -55,8 +56,6 @@
     statix
     # lua
     lua-language-server
-    # typescript
-    typescript-nvim
     # rust
     rust-analyzer
   ];
