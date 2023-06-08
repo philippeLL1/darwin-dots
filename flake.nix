@@ -35,6 +35,9 @@
             src = ./modules;
             loader = haumea.lib.loaders.path;
           };
+          hm = haumea.lib.load {
+            src = ./modules;
+          };
         in
         [
 
@@ -51,9 +54,9 @@
             home-manager.useUserPackages = true;
 
             # TODO: put in separate file
-            homebrew = modules.homebrew;
+            homebrew = hm.homebrew;
               
-            home-manager.users.drawer = import modules.userConfig;
+            home-manager.users.drawer = hm.userConfig;
             home-manager.extraSpecialArgs = { nix-doom-emacs = nix-doom-emacs; };
           }
         ];
