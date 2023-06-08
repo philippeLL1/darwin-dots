@@ -9,7 +9,7 @@
     haumea.url = "github:nix-community/haumea/v0.2.2";
     devenv.url = "github:cachix/devenv/latest";
     spacebar.url = "github:cmacrae/spacebar/v1.4.0";
-    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
   outputs = inputs@{ 
