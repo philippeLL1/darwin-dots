@@ -1,4 +1,4 @@
-{ pkgs, nix-doom-emacs, ... }:
+{ pkgs, nix-doom-emacs, configModules, ... }:
 {
   imports = [ nix-doom-emacs.hmModule ];
   # doom emacs
@@ -14,7 +14,7 @@
   
   # shells
   programs.bash.enable = true;
-  programs.zsh = import ./configs/shells/zsh.nix pkgs;
+  programs.zsh = configModules.configs.shells.zsh pkgs;
   programs.fish = import ./configs/shells/fish.nix pkgs;
 
   programs.wezterm.enable = true;

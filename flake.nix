@@ -30,35 +30,30 @@
       system = "aarch64-darwin";
       modules =
         let
-          # recursively load all module files
-          modules = haumea.lib.load {
-            src = ./modules;
-            loader = haumea.lib.loaders.path;
-          };
-          hm = haumea.lib.load {
+          # recursively load all nix module files
+          configModules = haumea.lib.load {
             src = ./modules;
             loader = haumea.lib.loaders.verbatim;
           };
         in
         [
 
+          # ensures that the flake's inputs are visible to each module
           { _module.args = inputs; }
 
           # 󰣖  system
-          modules.systemPackages
-          modules.systemConfig
+          configModules.systemPackages
+          configModules.systemConfig
 
           #   user
-          home-manager.darwinModules.home-manager
-          {
+          home-manager.darwinModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            # TODO: put in separate file
-            homebrew = hm.homebrew;
+            homebrew = configModules.homebrew;
               
-            home-manager.users.drawer = hm.userConfig;
-            home-manager.extraSpecialArgs = { nix-doom-emacs = nix-doom-emacs; };
+            home-manager.users.drawer = configModules.userConfig;
+            home-manager.extraSpecialArgs = { nix-doom-emacs = nix-doom-emacs; configModules = configModules; };
           }
         ];
     };
