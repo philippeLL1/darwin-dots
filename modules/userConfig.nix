@@ -1,7 +1,7 @@
 { pkgs, nix-doom-emacs, ... }:
 {
-  import = [ nix-doom-emacs.hmModule ];
-  programs.doom-emacs = import ./configs/emacs.nix;
+#  import = [ nix-doom-emacs.hmModule ];
+#  programs.doom-emacs = import ./configs/emacs.nix;
 
   home.packages = import ./userPackages.nix pkgs;
   programs.direnv.enable = true;
