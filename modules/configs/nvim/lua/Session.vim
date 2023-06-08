@@ -13,12 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +11 init.lua
-badd +8 configs/treesitter-config.lua
-badd +3 configs/lspconfig.lua
-badd +1 configs/init.lua
+badd +2 init.lua
+badd +11 configs/treesitter-config.lua
+badd +1 configs/lspconfig.lua
+badd +1 plugins.lua
 badd +1 configs/lsp-config.lua
-badd +10 configs/which-key-config.lua
 argglobal
 %argdel
 $argadd init.lua
@@ -59,17 +58,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 11 - ((10 * winheight(0) + 13) / 26)
+let s:l = 2 - ((1 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 11
-normal! 0
+keepjumps 2
+normal! 017|
 wincmd w
 argglobal
-if bufexists(fnamemodify("configs/init.lua", ":p")) | buffer configs/init.lua | else | edit configs/init.lua | endif
+if bufexists(fnamemodify("configs/lsp-config.lua", ":p")) | buffer configs/lsp-config.lua | else | edit configs/lsp-config.lua | endif
 if &buftype ==# 'terminal'
-  silent file configs/init.lua
+  silent file configs/lsp-config.lua
 endif
 balt init.lua
 setlocal fdm=manual
@@ -90,11 +89,11 @@ keepjumps 1
 normal! 025|
 wincmd w
 argglobal
-if bufexists(fnamemodify("configs/which-key-config.lua", ":p")) | buffer configs/which-key-config.lua | else | edit configs/which-key-config.lua | endif
+if bufexists(fnamemodify("configs/treesitter-config.lua", ":p")) | buffer configs/treesitter-config.lua | else | edit configs/treesitter-config.lua | endif
 if &buftype ==# 'terminal'
-  silent file configs/which-key-config.lua
+  silent file configs/treesitter-config.lua
 endif
-balt configs/treesitter-config.lua
+balt init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -105,19 +104,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 13) / 26)
+let s:l = 11 - ((10 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 050|
+keepjumps 11
+normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("configs/lsp-config.lua", ":p")) | buffer configs/lsp-config.lua | else | edit configs/lsp-config.lua | endif
+if bufexists(fnamemodify("plugins.lua", ":p")) | buffer plugins.lua | else | edit plugins.lua | endif
 if &buftype ==# 'terminal'
-  silent file configs/lsp-config.lua
+  silent file plugins.lua
 endif
-balt configs/treesitter-config.lua
+balt configs/lspconfig.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -135,7 +134,6 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-3wincmd w
 wincmd =
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -152,7 +150,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

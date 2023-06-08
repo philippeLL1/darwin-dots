@@ -1,5 +1,5 @@
-require'treesitter-config'
-require'lsp-config'
-require'neoscroll-config'
-require'which-key-config'
-require'vim-options'
+require	"configs.treesitter-config"
+require "configs.lsp-config"
+require "configs.neoscroll-config"
+require "configs.which-key-config"
+require "configs.vim-options"

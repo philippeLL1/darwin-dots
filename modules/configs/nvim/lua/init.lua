@@ -1,2 +1,3 @@
-require'./plugins.lua'
-require'configs'
+-- Entry point for the neovim config
+require "plugins"
+require "configs"
