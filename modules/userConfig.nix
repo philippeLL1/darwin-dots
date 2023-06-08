@@ -23,7 +23,7 @@
   # neovim
   programs.neovim = import ./configs/nvim.nix pkgs;
   xdg.configFile.nvim = {
-    source = ./configs/nvim;
+    source = ./configs/neovim;
     recursive = true;
   };
 
