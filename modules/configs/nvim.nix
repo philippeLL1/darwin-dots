@@ -6,22 +6,25 @@
 
   plugins = with pkgs.vimPlugins; [
 
-    # lsp
+    # LSP
     vim-nix
     nvim-lspconfig
     typescript-nvim
     
-    # completion
+    # Completion
     coq_nvim
     coq-artifacts
+
+    # Motions
+    lightspeed-nvim
 
     # Syntax highlighting
     nvim-treesitter.withAllGrammars
 
-    # mappings
+    # Mappings
     which-key-nvim
 
-    # status bar
+    # Status bar
     lualine-nvim
 
     # Auto close
@@ -41,6 +44,7 @@
     nui-nvim
     nvim-notify
     noice-nvim
+    dressing-nvim
     nvim-web-devicons
 
     # better scrolling

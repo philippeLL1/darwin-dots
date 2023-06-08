@@ -2,8 +2,10 @@
   environment.systemPackages = with pkgs; [
     # editors
     vim
-    # tools
+
+    # utils
     bottom
+
     # fonts
     nerdfonts
     hackgen-nf-font
