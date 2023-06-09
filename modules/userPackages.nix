@@ -49,7 +49,6 @@ pkgs: with pkgs; [
   pyright
   sqlite
   nodejs
-  clang
   coreutils
 
   # theming

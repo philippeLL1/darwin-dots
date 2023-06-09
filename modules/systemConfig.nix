@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-
   # dock 
   system.defaults.dock.show-recents = false;
   system.defaults.dock.autohide = true;

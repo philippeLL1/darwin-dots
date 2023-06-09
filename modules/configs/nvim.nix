@@ -14,6 +14,7 @@
     # Completion
     coq_nvim
     coq-artifacts
+    
 
     # Motions
     lightspeed-nvim
