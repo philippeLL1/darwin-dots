@@ -4,13 +4,13 @@
   # dock 
   system.defaults.dock.show-recents = false;
   system.defaults.dock.autohide = true;
-
+  system.defaults.dock.autohide-delay = 0.5;
   # menu bar
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 
   # hot corners
   system.defaults.dock.wvous-tl-corner = 2;
-  system.defaults.dock.wvous-tr-corner = 12;
+  system.defaults.dock.wvous-tr-corner = 1;
   system.defaults.dock.wvous-bl-corner = 4;
   system.defaults.dock.wvous-br-corner = 5;
   
@@ -39,19 +39,15 @@
     ShowPathbar = true;
   };
 
-  launchd.user.agents.spacebar.serviceConfig.StandardErrorPath = "/tmp/spacebar.err.log";
-  launchd.user.agents.spacebar.serviceConfig.StandardOutPath = "/tmp/spacebar.out.log";
-  launchd.user.agents.myspacebar.command = "spacebar";
   # trackpad gestures
   system.defaults.trackpad.TrackpadThreeFingerDrag = true;
-  # system.defaults.universalaccess = {
-  #	closeViewScrollWheelToggle = true;
-  #	closeViewZoomFollowsFocus = true;
-  # };
+
+  # animations
+  system.defaults.dock.expose-animation-duration = 0.5;
 
   # spaces
   system.defaults.dock.mru-spaces = false;
-  
+   
   # services
   services.spacebar = {
     enable = true;

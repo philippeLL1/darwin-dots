@@ -12,9 +12,13 @@
     typescript-nvim
     
     # Completion
-    coq_nvim
-    coq-artifacts
-    
+    cmp-nvim-lsp
+    cmp-buffer
+    cmp-path
+    cmp-cmdline
+    nvim-cmp
+    luasnip
+    cmp_luasnip
 
     # Motions
     lightspeed-nvim
