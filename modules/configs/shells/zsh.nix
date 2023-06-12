@@ -52,6 +52,7 @@
   localVariables = {
     FZF_COMPLETION_TRIGGER = '' '';
     FZF_DEFAULT_COMMAND = "fd --hidden";
+    WEZTERM_OPACITY = "1.0";
   };
 
   shellAliases = import ./aliases.nix;

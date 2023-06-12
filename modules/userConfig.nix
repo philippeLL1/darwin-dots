@@ -26,6 +26,11 @@
     source = ../dotfiles/neovim;
     recursive = true;
   };
+  
+  specialization."hello".configuration = {
+    programs.wezterm.enable = true;
+    programs.wezterm.extraConfig = builtins.readFile ../dotfiles/wezterm/wezterm2.lua;
+  };
 
   # emacs
   programs.emacs.enable = true;
@@ -45,13 +50,6 @@
     EDITOR = "nvim";
   };
 
-  specialization = {
-    gruvbox.configuration = {
-      home.sessionVariables = {
-        COLORSCHEME = "gruvbox";
-      };
-    };
-  };
   programs.tmux.enable = true;
   home.stateVersion = "23.05";
 
