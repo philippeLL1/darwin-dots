@@ -6,13 +6,14 @@ pkgs: with pkgs; [
   wezterm
   gimp
 
-  # emacs
-
   # tui
   fzf
   bottom
   wikicurses
   buku
+  nap  
+  dooit
+
   # cli
   lsd
   curl
@@ -54,7 +55,7 @@ pkgs: with pkgs; [
   # theming
   starship
   neofetch
-
+  dwt1-shell-color-scripts
   # services
   yabai
   skhd
@@ -62,5 +63,6 @@ pkgs: with pkgs; [
 
   karabiner-elements
   # fonts
-  nerdfonts
+  iosevka
+#  nerdfonts
 ]

@@ -2,7 +2,7 @@
 vim.opt.termguicolors = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
-vim.cmd "colorscheme oxocarbon"
+vim.cmd "colorscheme melange"
 vim.cmd "set fillchars=eob:\\ "
 vim.notify = require("notify")
 vim.o.timeout = true

@@ -6,6 +6,7 @@
 
   brews = [
     "jp2a"
+    "dooit"
   ];
 
   casks = [

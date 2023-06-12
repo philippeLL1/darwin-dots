@@ -4,7 +4,7 @@
   # dock 
   system.defaults.dock.show-recents = false;
   system.defaults.dock.autohide = true;
-  system.defaults.dock.autohide-delay = 0.5;
+  system.defaults.dock.autohide-delay = 0.1;
   # menu bar
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 
@@ -43,7 +43,7 @@
   system.defaults.trackpad.TrackpadThreeFingerDrag = true;
 
   # animations
-  system.defaults.dock.expose-animation-duration = 0.5;
+  system.defaults.dock.expose-animation-duration = 0.2;
 
   # spaces
   system.defaults.dock.mru-spaces = false;

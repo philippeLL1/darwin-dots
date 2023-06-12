@@ -49,7 +49,6 @@
     nui-nvim
     nvim-notify
     noice-nvim
-    dressing-nvim
     nvim-web-devicons
 
     # better scrolling
@@ -66,6 +65,7 @@
     material-nvim
     melange-nvim
     monokai-pro-nvim
+    zenburn
 
   ];
 

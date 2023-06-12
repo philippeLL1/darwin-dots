@@ -40,6 +40,18 @@
     userEmail = "philippelouislatour@gmail.com";
   };
 
+  # TODO: put in another file
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
+  specialization = {
+    gruvbox.configuration = {
+      home.sessionVariables = {
+        COLORSCHEME = "gruvbox";
+      };
+    };
+  };
   programs.tmux.enable = true;
   home.stateVersion = "23.05";
 

@@ -22,6 +22,7 @@ local cmp = require'cmp'
       { name = 'luasnip' }, -- For luasnip users.
     }, {
       { name = 'buffer' },
+      { name = 'path' },
     })
   })
 
