@@ -20,6 +20,11 @@
     luasnip
     cmp_luasnip
 
+    # Debugger
+    nvim-dap
+    nvim-dap-ui
+    telescope-dap-nvim
+
     # Motions
     lightspeed-nvim
 
