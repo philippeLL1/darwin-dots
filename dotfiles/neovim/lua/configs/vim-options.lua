@@ -3,6 +3,7 @@ local set = vim.o
 local cmd = vim.cmd
 local api = vim.api
 local global = vim.g
+local lsp = vim.lsp
 
 vim.wo.relativenumber = true
 
@@ -26,6 +27,15 @@ api.nvim_create_autocmd("TermEnter", {
    cmd "setlocal winhighlight=TermCursor:TerminalCursorShape"
   end,
 })
+
+lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- Disable signs
+    signs = false,
+  }
+)
+
+-- 2 space tabs
 set.expandtab = true
 set.smartindent = true
 set.tabstop = 2

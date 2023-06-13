@@ -10,6 +10,7 @@
     vim-nix
     nvim-lspconfig
     typescript-nvim
+    neodev-nvim
     
     # Completion
     cmp-nvim-lsp
@@ -20,16 +21,12 @@
     luasnip
     cmp_luasnip
 
-    # Debugger
-    nvim-dap
-    nvim-dap-ui
-    telescope-dap-nvim
-
     # Motions
     lightspeed-nvim
 
     # Syntax highlighting
     nvim-treesitter.withAllGrammars
+    todo-comments-nvim
 
     # Mappings
     which-key-nvim
@@ -60,7 +57,8 @@
     # Sessions 
     auto-session
 
-    # markdown reader/renderer
+    # misc
+    plenary-nvim
     glow-nvim
 
     # colorschemes
