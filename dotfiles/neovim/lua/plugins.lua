@@ -6,3 +6,5 @@ require"bufferline".setup{}
 require"nvim-web-devicons".setup{}
 require"lightspeed".setup{}
 require"nvim-autopairs".setup{}
+require"dressing".setup{}
+require"auto-session".setup{}

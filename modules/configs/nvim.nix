@@ -50,9 +50,10 @@
     nvim-notify
     noice-nvim
     nvim-web-devicons
+    dressing-nvim
 
-    # better scrolling
-    neoscroll-nvim
+    # Sessions 
+    auto-session
 
     # markdown reader/renderer
     glow-nvim

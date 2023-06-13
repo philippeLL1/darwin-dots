@@ -23,6 +23,7 @@ pkgs: with pkgs; [
   fd
   jq
   bat
+  leetcode-cli
 #  bat-extras.batman
   bat-extras.batdiff
   bat-extras.batgrep
@@ -64,5 +65,6 @@ pkgs: with pkgs; [
   karabiner-elements
   # fonts
   iosevka
+  jetbrains-mono
 #  nerdfonts
 ]

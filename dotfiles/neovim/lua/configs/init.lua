@@ -1,6 +1,6 @@
 require	"configs.treesitter-config"
 require "configs.cmp-config"
-require "configs.neoscroll-config"
+--require "configs.neoscroll-config"
 require "configs.which-key-config"
 require "configs.vim-options"
---require "configs.noice-config"
+require "configs.noice-config"

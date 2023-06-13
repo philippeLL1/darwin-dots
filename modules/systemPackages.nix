@@ -9,10 +9,6 @@
     # utils
     bottom
 
-    # fonts
-    nerdfonts
-    hackgen-nf-font
-
     # devenv
     lua
     cachix

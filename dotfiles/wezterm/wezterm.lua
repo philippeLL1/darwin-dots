@@ -14,7 +14,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.adjust_window_size_when_changing_font_size = false
 config.use_fancy_tab_bar = false
-config.window_background_opacity = tonumber(os.getenv("WEZTERM_OPACITY"))
+config.window_background_opacity = 0.3
 config.macos_window_background_blur = 30
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -41,5 +41,5 @@ config.unix_domains = {
 -- If you prefer to connect manually, leave out this line.
 config.default_gui_startup_args = { 'connect', 'unix' }
 
-config.color_scheme = 'Railscasts (base16)'
+config.color_scheme = 'Framer (base16)'
 return config

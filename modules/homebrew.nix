@@ -15,5 +15,6 @@
     "firefox"
     "obs"
     "reaper"
+    "launchcontrol"
   ];
 }
