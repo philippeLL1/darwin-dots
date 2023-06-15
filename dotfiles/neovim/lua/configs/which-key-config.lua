@@ -17,8 +17,8 @@ wk.register({
   },
   t = {
     name = "Tabs",
-    n = { "<cmd>tabnew<cr>", "files" },
-    c = { "<cmd>tabclose<cr>", "files" },
-    o = { "<cmd>tabonly<cr>", "files" },
+    n = { "<cmd>tabnew<cr>", "new tab" },
+    c = { "<cmd>tabclose<cr>", "close tab" },
+    o = { "<cmd>tabonly<cr>", "close all other tabs" },
   }
 }, { prefix = "<leader>" })

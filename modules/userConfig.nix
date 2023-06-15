@@ -26,6 +26,13 @@
     source = ../dotfiles/neovim;
     recursive = true;
   };
+
+  xdg.configFile.nap = {
+    source = ../dotfiles/nap;
+    recursive = true;
+  };
+
+  
   
   # emacs
   programs.emacs.enable = true;

@@ -11,11 +11,11 @@ if wezterm.config_builder then
 end
 -- config options
 config.hide_tab_bar_if_only_one_tab = true
-config.tab_bar_at_bottom = true
+config.tab_bar_at_bottom = false
 config.adjust_window_size_when_changing_font_size = false
-config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
 config.window_background_opacity = 0.3
-config.macos_window_background_blur = 30
+config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
@@ -25,7 +25,7 @@ config.window_padding = {
 }
 config.colors = {
   tab_bar = {
-    background = '#181818'
+    background = 'rgba(0,0,0,0)'
   }
 }
 
@@ -41,5 +41,5 @@ config.unix_domains = {
 -- If you prefer to connect manually, leave out this line.
 config.default_gui_startup_args = { 'connect', 'unix' }
 
-config.color_scheme = 'Framer (base16)'
+config.color_scheme = 'Monokai Pro Ristretto (Gogh)'
 return config

@@ -12,7 +12,7 @@ pkgs: with pkgs; [
   wikicurses
   buku
   nap  
-  dooit
+  pfetch
 
   # cli
   lsd
@@ -24,11 +24,11 @@ pkgs: with pkgs; [
   jq
   bat
   leetcode-cli
-#  bat-extras.batman
   bat-extras.batdiff
   bat-extras.batgrep
   bat-extras.batpipe
   zoxide
+  onefetch
 
   # lsp
   haskell-language-server
@@ -55,8 +55,8 @@ pkgs: with pkgs; [
 
   # theming
   starship
-  neofetch
   dwt1-shell-color-scripts
+
   # services
   yabai
   skhd
