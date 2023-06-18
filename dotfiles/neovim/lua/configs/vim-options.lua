@@ -25,6 +25,7 @@ api.nvim_set_hl(0, "TerminalCursorShape", { underline = true })
 api.nvim_create_autocmd("TermEnter", {
   callback = function()
    cmd "setlocal winhighlight=TermCursor:TerminalCursorShape"
+   cmd "set norelativenumber"
   end,
 })
 

@@ -18,7 +18,10 @@
   programs.fish = configModules.configs.shells.fish pkgs;
 
   programs.wezterm.enable = true;
-  programs.wezterm.extraConfig = builtins.readFile ../dotfiles/wezterm/wezterm.lua;
+  xdg.configFile.wezterm = {
+    source = ../dotfiles/wezterm;
+    recursive = true;
+  };
 
   # neovim
   programs.neovim = configModules.configs.nvim pkgs;
@@ -36,6 +39,7 @@
   
   # emacs
   programs.emacs.enable = true;
+  programs.emacs.extraPackages = epkgs: [ epkgs.jupyter ];
 
   # prevents nix-darwin from building if set to true
   manual.manpages.enable = false;

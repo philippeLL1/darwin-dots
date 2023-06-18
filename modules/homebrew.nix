@@ -17,5 +17,8 @@
     "reaper"
     "launchcontrol"
     "google-chrome"
+    "thunderbird"
+    "gimp"
+    "keycastr"
   ];
 }

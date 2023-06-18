@@ -4,7 +4,6 @@ pkgs: with pkgs; [
   kitty-themes
   karabiner-elements
   wezterm
-  gimp
 
   # tui
   fzf
@@ -13,6 +12,7 @@ pkgs: with pkgs; [
   buku
   nap  
   pfetch
+  most
 
   # cli
   lsd
@@ -29,6 +29,7 @@ pkgs: with pkgs; [
   bat-extras.batpipe
   zoxide
   onefetch
+  imagemagick
 
   # lsp
   haskell-language-server
@@ -52,6 +53,9 @@ pkgs: with pkgs; [
   sqlite
   nodejs
   coreutils
+  jupyter
+  tor
+  (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
 
   # theming
   starship
@@ -66,5 +70,5 @@ pkgs: with pkgs; [
   # fonts
   iosevka
   jetbrains-mono
-#  nerdfonts
+
 ]

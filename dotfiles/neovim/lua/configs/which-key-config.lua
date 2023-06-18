@@ -20,5 +20,10 @@ wk.register({
     n = { "<cmd>tabnew<cr>", "new tab" },
     c = { "<cmd>tabclose<cr>", "close tab" },
     o = { "<cmd>tabonly<cr>", "close all other tabs" },
+  },
+  l = {
+    name = "LSP",
+    d = { "<cmd>Trouble<cr>", "diagnostics"  },
+    c = { "<cmd>normal gcc<cr>", "toggle comment"  },
   }
 }, { prefix = "<leader>" })

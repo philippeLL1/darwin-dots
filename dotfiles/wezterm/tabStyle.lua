@@ -1,10 +1,10 @@
 local wezterm = require 'wezterm'
 
 -- The filled in variant of the < symbol
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local LEFT_SYMBOL = wezterm.nerdfonts.ple_left_half_circle_thick
 
 -- The filled in variant of the > symbol
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+local RIGHT_SYMBOL = wezterm.nerdfonts.ple_right_half_circle_thick
 
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`
@@ -20,17 +20,17 @@ function tab_title(tab_info)
   -- in that tab
   return tab_info.active_pane.title
 end
-
+ 
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, config, hover, max_width)
-    local edge_background = '#0b0022'
-    local background = '#1b1032'
-    local foreground = '#808080'
+    local edge_background ='rgba(0,0,0,0)'
+    local background = '#A98165'
+    local foreground = '#E4DEC8'
 
     if tab.is_active then
-      background = '#2b2042'
-      foreground = '#c0c0c0'
+      background = '#F2D0A4'
+      foreground = '#222222'
     elseif hover then
       background = '#3b3052'
       foreground = '#909090'
@@ -47,13 +47,13 @@ wezterm.on(
     return {
       { Background = { Color = edge_background } },
       { Foreground = { Color = edge_foreground } },
-      { Text = SOLID_LEFT_ARROW },
+      { Text = LEFT_SYMBOL },
       { Background = { Color = background } },
       { Foreground = { Color = foreground } },
       { Text = title },
       { Background = { Color = edge_background } },
       { Foreground = { Color = edge_foreground } },
-      { Text = SOLID_RIGHT_ARROW },
+      { Text = RIGHT_SYMBOL .. ' ' },
     }
   end
 )

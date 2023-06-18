@@ -11,11 +11,10 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- tab bar
-
 -- window
 config.adjust_window_size_when_changing_font_size = false
 config.window_background_opacity = 0.3
+config.macos_window_background_blur = 10
 config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
@@ -34,8 +33,11 @@ config.colors = {
 -- TAB BAR 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
-config.macos_window_background_blur = 20
 config.show_new_tab_button_in_tab_bar = false
+config.tab_bar_at_bottom = true
+config.keys = {
+  { key = 'F9', mods = 'ALT', action = wezterm.action.ShowTabNavigator },
+}
 
 -- This causes `wezterm` to act as though it was started as
 -- `wezterm connect unix` by default, connecting to the unix
