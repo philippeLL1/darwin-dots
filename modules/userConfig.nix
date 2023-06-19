@@ -39,16 +39,6 @@
   
   # emacs
   programs.emacs.enable = true;
-  programs.emacs.extraPackages = epkgs: with epkgs; [ 
-    #jupyter 
-    #annalist
-    # haskell-mode
-    # org-modern
-  ];
-  # programs.emacs.overrides = self: super: rec {
-  #   haskell-mode  = self.melpaPackages.haskell-mode;
-  #   org-modern    = self.melpaPackages.org-modern;
-  # };
 
   # prevents nix-darwin from building if set to true
   manual.manpages.enable = false;
