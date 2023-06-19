@@ -19,6 +19,6 @@
     "google-chrome"
     "thunderbird"
     "gimp"
-    "keycastr"
+    "vlc"
   ];
 }

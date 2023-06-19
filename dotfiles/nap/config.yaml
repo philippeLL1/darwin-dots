@@ -2,10 +2,10 @@ default_language: cpp
 theme: dracula
 
 # Colors
-background: "0"
+background: "14"
 foreground: "7"
 primary_color: "#AFBEE1"
-primary_color_subdued: "#64708D"
+primary_color_subdued: "#084c61"
 green: "#527251"
 bright_green: "#BCE1AF"
 bright_red: "#E49393"

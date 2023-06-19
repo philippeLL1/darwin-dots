@@ -53,6 +53,13 @@
   # TODO: put in another file
   home.sessionVariables = {
     EDITOR = "nvim";
+    XDG_CONFIG_HOME = "/Users/drawer/.config/";
+
+    # Nap styling (snippet manager)
+    NAP_BACKGROUND = "0";
+    NAP_FOREGROUND = "7";
+    NAP_PRIMARY_COLOR = "#ff79c6";
+    NAP_PRIMARY_COLOR_SUBDUED = "#419D78"; 
   };
 
   programs.tmux.enable = true;

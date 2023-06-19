@@ -4,6 +4,7 @@ pkgs: with pkgs; [
   kitty-themes
   karabiner-elements
   wezterm
+  vscodium
 
   # tui
   fzf
@@ -13,6 +14,7 @@ pkgs: with pkgs; [
   nap  
   pfetch
   most
+  mprocs
 
   # cli
   lsd
@@ -30,6 +32,7 @@ pkgs: with pkgs; [
   zoxide
   onefetch
   imagemagick
+  pandoc
 
   # lsp
   haskell-language-server
@@ -56,10 +59,12 @@ pkgs: with pkgs; [
   jupyter
   tor
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
+  vhs
 
   # theming
   starship
   dwt1-shell-color-scripts
+
 
   # services
   yabai
