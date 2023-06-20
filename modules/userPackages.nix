@@ -63,7 +63,6 @@ pkgs: with pkgs; [
   vhs
   scala
   scala-cli
-  fsharp
 
   # theming
   starship
