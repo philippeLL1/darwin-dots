@@ -15,9 +15,10 @@ in
   programs.direnv.nix-direnv.enable = true;
   
   # shells
-  programs.bash = shellConfigs.bash pkgs;
-  programs.zsh  = shellConfigs.zsh pkgs;
-  programs.fish = shellConfigs.fish pkgs;
+  programs.bash     = shellConfigs.bash pkgs;
+  programs.zsh      = shellConfigs.zsh pkgs;
+  programs.fish     = shellConfigs.fish pkgs;
+  programs.nushell  = shellConfigs.nushell pkgs;
 
   programs.wezterm.enable = true;
   xdg.configFile.wezterm = {
