@@ -59,12 +59,11 @@ pkgs: with pkgs; [
   nodejs
   coreutils
   jupyter
-  tor
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
-  fsharp
   coursier
   scala_3
+  jetbrains.rider
 
   # theming
   starship
