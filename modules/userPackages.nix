@@ -63,6 +63,7 @@ pkgs: with pkgs; [
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
   fsharp
+  coursier
   scala_3
 
   # theming

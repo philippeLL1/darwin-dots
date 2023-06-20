@@ -83,5 +83,7 @@
     lua-language-server
     # rust
     rust-analyzer
+    # fsharp
+
   ];
 }
