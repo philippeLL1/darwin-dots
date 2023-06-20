@@ -33,7 +33,7 @@
   xdg.configFile.sketchybar = {
     source = ../dotfiles/sketchybar;
     recursive = true;
-  }
+  };
   
   
   # emacs
