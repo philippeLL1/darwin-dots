@@ -61,9 +61,9 @@ pkgs: with pkgs; [
   tor
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
-  scala
-  scala-cli
-
+  # fsharp
+  # scala
+  #
   # theming
   starship
   dwt1-shell-color-scripts
