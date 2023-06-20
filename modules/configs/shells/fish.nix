@@ -23,4 +23,5 @@
       };
     }
   ];
+  interactiveShellInit = '' starship init fish | source '';
 }

@@ -35,6 +35,7 @@ pkgs: with pkgs; [
   imagemagick
   pandoc
   gum
+  fasd
 
   # lsp
   haskell-language-server
@@ -63,6 +64,7 @@ pkgs: with pkgs; [
   vhs
   coursier
   scala_3
+  metals
   jetbrains.rider
 
   # theming

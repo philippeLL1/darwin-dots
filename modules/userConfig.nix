@@ -1,4 +1,6 @@
 { pkgs, nix-doom-emacs, configModules, ... }:
+let shellConfigs = configModules.configs.shells;
+in
 {
   imports = [ nix-doom-emacs.hmModule ];
   # doom emacs
@@ -13,9 +15,9 @@
   programs.direnv.nix-direnv.enable = true;
   
   # shells
-  programs.bash.enable = true;
-  programs.zsh = configModules.configs.shells.zsh pkgs;
-  programs.fish = configModules.configs.shells.fish pkgs;
+  programs.bash = shellConfigs.bash pkgs;
+  programs.zsh  = shellConfigs.zsh pkgs;
+  programs.fish = shellConfigs.fish pkgs;
 
   programs.wezterm.enable = true;
   xdg.configFile.wezterm = {
