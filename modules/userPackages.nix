@@ -5,6 +5,7 @@ pkgs: with pkgs; [
   karabiner-elements
   wezterm
   vscodium
+  sketchybar
 
   # tui
   fzf
@@ -62,7 +63,7 @@ pkgs: with pkgs; [
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
   fsharp
-  scala
+  scala_3
 
   # theming
   starship

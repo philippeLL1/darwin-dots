@@ -30,18 +30,17 @@
     recursive = true;
   };
 
-  xdg.configFile.nap = {
-    source = ../dotfiles/nap;
+  xdg.configFile.sketchybar = {
+    source = ../dotfiles/sketchybar;
     recursive = true;
-  };
-
+  }
   
   
   # emacs
   programs.emacs.enable = true;
 
   # prevents nix-darwin from building if set to true
-  manual.manpages.enable = false;
+  manual.manpages.enable = true;
 
   # git stuff 
   # TODO: put in another file
