@@ -20,5 +20,6 @@
     "thunderbird"
     "gimp"
     "vlc"
+    "kdenlive"
   ];
 }

@@ -13,7 +13,7 @@ pkgs: with pkgs; [
   buku
   nap  
   pfetch
-  most
+  more
   mprocs
 
   # cli
@@ -33,6 +33,7 @@ pkgs: with pkgs; [
   onefetch
   imagemagick
   pandoc
+  gum
 
   # lsp
   haskell-language-server
@@ -60,6 +61,9 @@ pkgs: with pkgs; [
   tor
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
+  scala
+  scala-cli
+  fsharp
 
   # theming
   starship

@@ -59,7 +59,7 @@
     NAP_BACKGROUND = "0";
     NAP_FOREGROUND = "7";
     NAP_PRIMARY_COLOR = "#ff79c6";
-    NAP_PRIMARY_COLOR_SUBDUED = "#419D78"; 
+    NAP_PRIMARY_COLOR_SUBDUED = "#8F3A69"; 
   };
 
   programs.tmux.enable = true;

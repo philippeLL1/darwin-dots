@@ -126,8 +126,6 @@
   alt - t : yabai -m window --toggle float;\
             yabai -m window --grid 4:4:1:1:2:2
 
-  # toggle sticky (show on all spaces)
-  alt - s : yabai -m window --toggle sticky
 
   # toggle topmost (keep above other windows)
   alt - o : yabai -m window --toggle topmost
