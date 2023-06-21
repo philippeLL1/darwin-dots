@@ -36,6 +36,8 @@ pkgs: with pkgs; [
   pandoc
   gum
   fasd
+  ion
+  bitwarden-cli
 
   # lsp
   haskell-language-server
@@ -81,5 +83,6 @@ pkgs: with pkgs; [
   # fonts
   iosevka
   jetbrains-mono
+  montserrat
 
 ]

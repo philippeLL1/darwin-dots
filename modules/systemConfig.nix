@@ -44,7 +44,7 @@
   system.defaults.trackpad.TrackpadThreeFingerDrag = true;
 
   # animations
-  system.defaults.dock.expose-animation-duration = 15.0;
+  system.defaults.dock.expose-animation-duration = 0.1;
 
   # spaces
   system.defaults.dock.mru-spaces = false;
