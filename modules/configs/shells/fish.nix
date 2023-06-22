@@ -23,5 +23,8 @@
       };
     }
   ];
-  interactiveShellInit = '' starship init fish | source '';
+  interactiveShellInit = '' 
+  starship init fish | source 
+  zoxide init fish | source
+  '';
 }

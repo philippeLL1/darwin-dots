@@ -21,5 +21,6 @@
     "gimp"
     "vlc"
     "kdenlive"
+    "native-access"
   ];
 }

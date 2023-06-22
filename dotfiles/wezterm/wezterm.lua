@@ -14,7 +14,7 @@ end
 -- window
 config.adjust_window_size_when_changing_font_size = false
 config.window_background_opacity = 0.3
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 0
 config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,

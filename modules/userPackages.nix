@@ -38,6 +38,9 @@ pkgs: with pkgs; [
   fasd
   ion
   bitwarden-cli
+  xonsh
+  mods
+  ghostscript
 
   # lsp
   haskell-language-server
