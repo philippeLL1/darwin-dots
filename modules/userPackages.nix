@@ -6,6 +6,7 @@ pkgs: with pkgs; [
   wezterm
   vscodium
   sketchybar
+  zathura
 
   # tui
   fzf
