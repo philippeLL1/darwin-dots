@@ -21,28 +21,12 @@ in
   programs.nushell  = shellConfigs.nushell pkgs;
 
   programs.wezterm.enable = true;
-  # xdg.configFile.wezterm = {
-  #   source = ../dotfiles/wezterm;
-  #   recursive = true;
-  # };
-  #
 
   # ~/.config/* files
   xdg = configModules.configs.xdg; 
 
   # neovim
   programs.neovim = configModules.configs.nvim pkgs;
-  # xdg.configFile.nvim = {
-  #   source = ../dotfiles/neovim;
-  #   recursive = true;
-  # };
-  #
-  # xdg.configFile.sketchybar = {
-  #   source = ../dotfiles/sketchybar;
-  #   recursive = true;
-  # };
-  # 
-  # 
   # emacs
   programs.emacs.enable = true;
 
@@ -67,6 +51,11 @@ in
     NAP_PRIMARY_COLOR = "#ff79c6";
     NAP_PRIMARY_COLOR_SUBDUED = "#8F3A69"; 
   };
+
+  # PATH
+  home.sessionPath = [
+    "$HOME/.scripts/bin/"
+  ];
 
   programs.tmux.enable = true;
   home.stateVersion = "23.05";

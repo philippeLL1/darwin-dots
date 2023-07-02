@@ -111,8 +111,8 @@ shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 #                   yabai -m space --focus "$\{index}"
 
 # fast focus desktop
-cmd + alt - x : yabai -m space --focus recent
-cmd + alt - 1 : yabai -m space --focus 1
+shift + alt - x : yabai -m space --focus recent
+shift + alt - 1 : yabai -m space --focus 1
 
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
@@ -143,13 +143,13 @@ cmd + alt - 1 : yabai -m space --focus 1
 
 # toggle window zoom
 # alt - d : yabai -m window --toggle zoom-parent
-# alt - f : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
 # alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), topmost, picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip

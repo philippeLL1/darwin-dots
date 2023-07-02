@@ -37,3 +37,5 @@ lspconfig.lua_ls.setup {
 lspconfig.nil_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.metals.setup {}
+lspconfig.hls.setup {}
+

@@ -13,14 +13,15 @@
     "qutebrowser"
     "karabiner-elements"
     "firefox"
-    "obs"
     "reaper"
     "launchcontrol"
     "google-chrome"
     "thunderbird"
     "gimp"
     "vlc"
-    "kdenlive"
     "native-access"
+    "blender"
+    "obs-ndi"
+    "utm"
   ];
 }

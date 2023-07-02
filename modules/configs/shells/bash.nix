@@ -2,5 +2,10 @@
 {
   enable            = true;
   enableCompletion  = true;
-  initExtra         = '' eval "$(starship init bash)" '';
+  shellAliases = import ./aliases.nix;
+  initExtra         = '' 
+    eval "$(starship init bash)" 
+    eval "$(zoxide init bash)"
+    export PATH=$PATH:/Users/drawer/.scripts/bin
+  '';
 }

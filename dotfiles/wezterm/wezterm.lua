@@ -13,8 +13,8 @@ end
 
 -- window
 config.adjust_window_size_when_changing_font_size = false
-config.window_background_opacity = 0.3
-config.macos_window_background_blur = 0
+config.window_background_opacity = 0.6
+config.macos_window_background_blur = 30
 config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
@@ -22,6 +22,9 @@ config.window_padding = {
 	top = 0,
 	bottom = 0
 }
+
+-- cursor
+config.default_cursor_style = 'BlinkingBar'
 
 -- COLORS
 config.color_scheme = 'Monokai Pro Ristretto (Gogh)'

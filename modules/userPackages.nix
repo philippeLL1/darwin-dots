@@ -7,6 +7,7 @@ pkgs: with pkgs; [
   vscodium
   sketchybar
   zathura
+  karabiner-elements
 
   # tui
   fzf
@@ -17,6 +18,8 @@ pkgs: with pkgs; [
   pfetch
   more
   mprocs
+  slides
+  pipes
 
   # cli
   lsd
@@ -61,7 +64,6 @@ pkgs: with pkgs; [
   shellcheck
   direnv
   emscripten
-  pyright
   sqlite
   nodejs
   coreutils
@@ -72,6 +74,7 @@ pkgs: with pkgs; [
   scala_3
   metals
   jetbrains.rider
+  jetbrains.clion
 
   # theming
   starship
@@ -83,7 +86,7 @@ pkgs: with pkgs; [
   skhd
   spacebar
 
-  karabiner-elements
+
   # fonts
   iosevka
   jetbrains-mono
