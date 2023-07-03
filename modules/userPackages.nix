@@ -75,6 +75,8 @@ pkgs: with pkgs; [
   metals
   jetbrains.rider
   jetbrains.clion
+  cling
+
 
   # theming
   starship

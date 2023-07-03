@@ -23,5 +23,7 @@
     "blender"
     "obs-ndi"
     "utm"
+    "gog-galaxy"
+    "steam"
   ];
 }

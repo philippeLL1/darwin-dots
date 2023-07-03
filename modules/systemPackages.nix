@@ -6,6 +6,9 @@
     # editors
     vim
 
+    # shells
+    nushell
+
     # utils
     bottom
 

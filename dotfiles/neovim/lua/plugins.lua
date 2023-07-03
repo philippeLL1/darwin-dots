@@ -7,3 +7,4 @@ require"lightspeed".setup{}
 require"nvim-autopairs".setup{}
 -- require"dressing".setup{}
 require"auto-session".setup{}
+require"flatten".setup{}

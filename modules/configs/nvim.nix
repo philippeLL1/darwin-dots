@@ -61,6 +61,7 @@
     plenary-nvim
     glow-nvim
     comment-nvim
+    flatten-nvim
 
     # colorschemes
     oxocarbon-nvim
