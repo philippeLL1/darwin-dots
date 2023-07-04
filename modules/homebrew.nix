@@ -25,5 +25,6 @@
     "utm"
     "gog-galaxy"
     "steam"
+    "clion"
   ];
 }

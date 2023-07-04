@@ -5,7 +5,7 @@
   # dock 
   system.defaults.dock.show-recents = false;
   system.defaults.dock.autohide = true;
-  system.defaults.dock.autohide-delay = 0.5;
+  system.defaults.dock.autohide-delay = 10.;
   # menu bar
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 

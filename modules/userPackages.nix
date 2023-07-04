@@ -73,9 +73,7 @@ pkgs: with pkgs; [
   coursier
   scala_3
   metals
-  jetbrains.rider
-  jetbrains.clion
-  cling
+  imgui
 
 
   # theming

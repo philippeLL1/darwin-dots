@@ -8,6 +8,8 @@
 
     # shells
     nushell
+    oil
+    ion
 
     # utils
     bottom

@@ -21,6 +21,9 @@
     luasnip
     cmp_luasnip
 
+    # Formatting
+    formatter-nvim
+
     # Motions
     lightspeed-nvim
 
@@ -62,6 +65,7 @@
     glow-nvim
     comment-nvim
     flatten-nvim
+    nvim-colorizer-lua
 
     # colorschemes
     oxocarbon-nvim
