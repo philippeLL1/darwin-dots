@@ -151,6 +151,9 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 # float / unfloat window and center on screen
 alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
+# Launch Floodlight
+alt + space : floodlight
+
 # toggle sticky(+float), topmost, picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
 ''

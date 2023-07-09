@@ -42,6 +42,9 @@ set.smartindent = true
 set.tabstop = 2
 set.shiftwidth = 2
 
+-- MacOS Clipboard Synch 
+set.clipboard = "unnamedplus";
+
 -- LSP UI Config
 vim.diagnostic.config({
   virtual_text = true,

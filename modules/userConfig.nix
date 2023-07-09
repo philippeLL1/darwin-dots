@@ -21,6 +21,13 @@ in
   programs.nushell  = shellConfigs.nushell pkgs;
 
   programs.wezterm.enable = true;
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
+
 
   # ~/.config/* files
   xdg = configModules.configs.xdg; 

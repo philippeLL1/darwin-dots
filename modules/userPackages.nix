@@ -53,7 +53,6 @@ pkgs: with pkgs; [
   # dev
   rustc
   cargo
-  nixpkgs-fmt
   lua
   go
   cmake
@@ -71,9 +70,7 @@ pkgs: with pkgs; [
   (python3.withPackages(ps: with ps; [ tensorflow matplotlib keras numpy pandas ]))
   vhs
   coursier
-  scala_3
   metals
-  imgui
 
 
   # theming

@@ -24,6 +24,7 @@ wk.register({
   l = {
     name = "LSP",
     d = { "<cmd>Trouble<cr>", "diagnostics"  },
-    c = { "<cmd>normal gcc<cr>", "toggle comment"  },
-  }
+    h = { vim.lsp.buf.hover,  "Popup Definition"  },
+  },
+  ["/"] = { "<cmd> normal gcc<cr>", "Toggle Comment" }
 }, { prefix = "<leader>" })
