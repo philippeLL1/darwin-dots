@@ -12,17 +12,17 @@
     nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
-  outputs = inputs@{ 
-    self, 
-    nixpkgs, 
-    home-manager, 
-    darwin, 
-    haumea, 
-    devenv, 
-    spacebar, 
+  outputs = inputs@{
+    self,
+    nixpkgs,
+    home-manager,
+    darwin,
+    haumea,
+    devenv,
+    spacebar,
     nix-doom-emacs,
-    ... 
-  }: 
+    ...
+  }:
 
   {
 
@@ -51,7 +51,7 @@
             home-manager.useUserPackages = true;
 
             homebrew = configModules.homebrew;
-              
+
             home-manager.users.drawer = configModules.userConfig;
             home-manager.extraSpecialArgs = { nix-doom-emacs = nix-doom-emacs; configModules = configModules; };
           }

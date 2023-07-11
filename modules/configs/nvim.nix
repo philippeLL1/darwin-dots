@@ -70,12 +70,13 @@
     # colorschemes
     oxocarbon-nvim
     kanagawa-nvim
-    catppuccin-nvim
     gruvbox-nvim
     material-nvim
     melange-nvim
     monokai-pro-nvim
     zenburn
+    vim-code-dark
+    vim-one
 
   ];
 
@@ -88,7 +89,5 @@
     lua-language-server
     # rust
     rust-analyzer
-    # fsharp
-
   ];
 }
