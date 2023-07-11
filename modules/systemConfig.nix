@@ -68,7 +68,7 @@
   services.skhd = {
     enable = true;
     package = pkgs.skhd;
-    skhdConfig = import ./configs/skhd.nix;
+    skhdConfig = "shift + alt - f : firefox";
   };
 
   # Auto upgrade nix package and the daemon service.
