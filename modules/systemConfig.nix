@@ -85,7 +85,7 @@
 
   nix = {
     package = pkgs.nixUnstable; 
-    extraOptions.experimental-features = "nix-command \n flakes";
+    extraOptions = ''experimental-features = nix-command flakes'';
   };
 
   environment = { 
