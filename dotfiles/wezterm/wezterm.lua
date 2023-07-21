@@ -26,7 +26,10 @@ config.window_padding = {
 -- cursor
 config.default_cursor_style = 'BlinkingBar'
 
--- COLORS
+-- font 
+config.font_size = 14.0
+
+-- colors
 config.color_scheme = 'Monokai Pro Ristretto (Gogh)'
 config.colors = {
   tab_bar = {

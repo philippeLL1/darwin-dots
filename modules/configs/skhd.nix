@@ -1,7 +1,4 @@
-''
-# Launch Floodlight
-alt + "space" : floodlight
-
-# toggle sticky(+float), topmost, picture-in-picture
-# alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
-''
+[
+  "alt - t : yabai -m window --toggle float"
+  "alt - \"space\" : floodlight"
+]

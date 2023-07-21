@@ -1,83 +1,98 @@
 { pkgs, ... }:
-
 {
-  environment.pathsToLink = [ "/share/bash-completion" ];
-  # dock 
-  system.defaults.dock.show-recents = false;
-  system.defaults.dock.autohide = true;
-  system.defaults.dock.autohide-delay = 10.;
-  # menu bar
-  system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 
-  # hot corners
-  system.defaults.dock.wvous-tl-corner = 2;
-  system.defaults.dock.wvous-tr-corner = 1;
-  system.defaults.dock.wvous-bl-corner = 4;
-  system.defaults.dock.wvous-br-corner = 5;
-  
-  # keyboard
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
-  system.defaults.NSGlobalDomain.KeyRepeat = 2;
+  # System Settings
+  system.defaults = { 
 
-  # spelling
-  system.defaults.NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
-  system.defaults.NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
-  system.defaults.NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
-  system.defaults.NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
-  system.defaults.NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+    # compositor options
+    dock = {
+      show-recents = false; 
+      autohide = true;
+      autohide-delay = 10000.;
+      expose-animation-duration = 0.00001;
+      mru-spaces = false;
 
-  # icloud
-  system.defaults.NSGlobalDomain.NSDocumentSaveNewDocumentsToCloud = false;
+      # hot corners
+      wvous-tl-corner = 2;
+      wvous-tr-corner = 1;
+      wvous-bl-corner = 4;
+      wvous-br-corner = 5;
+    }; 
 
-  # finder
-  system.defaults.NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
-  system.defaults.NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
-  system.defaults.finder = {
-    CreateDesktop = false;
-    FXDefaultSearchScope = "SCcf";
-    FXEnableExtensionChangeWarning = false;
-    QuitMenuItem = true;
-    ShowPathbar = true;
+    # general options
+    NSGlobalDomain = {
+        _HIHideMenuBar = true;
+
+        # spelling
+        NSAutomaticCapitalizationEnabled = false;
+        NSAutomaticDashSubstitutionEnabled = false;
+        NSAutomaticPeriodSubstitutionEnabled = false;
+        NSAutomaticQuoteSubstitutionEnabled = false;
+        NSAutomaticSpellingCorrectionEnabled = false;
+
+        # keyboard
+        InitialKeyRepeat = 12;
+        KeyRepeat = 2;
+
+        # saving documents
+        NSDocumentSaveNewDocumentsToCloud = false;
+        NSNavPanelExpandedStateForSaveMode = true;
+        NSNavPanelExpandedStateForSaveMode2 = true;
+      };
+
+    finder = {
+      CreateDesktop = false;
+      FXDefaultSearchScope = "SCcf";
+      FXEnableExtensionChangeWarning = false;
+      QuitMenuItem = true;
+      ShowPathbar = true;
+      AppleShowAllExtensions = true;
+
+    };
+
+    trackpad = { TrackpadThreeFingerDrag = true; };
   };
 
-  # trackpad gestures
-  system.defaults.trackpad.TrackpadThreeFingerDrag = true;
 
-  # animations
-  system.defaults.dock.expose-animation-duration = 0.1;
-
-  # spaces
-  system.defaults.dock.mru-spaces = false;
-   
-  # fonts
-  fonts.fontDir.enable = true;
-  fonts.fonts = [ pkgs.nerdfonts ];
-
-  # services
-  services.spacebar = {
-    enable = true;
-    package = pkgs.spacebar;
-    config = import ./configs/spacebar.nix;
-  };
-  services.yabai = {
-    enable = true;
-    package = pkgs.yabai;
-    enableScriptingAddition = true;
-    config = import ./configs/yabai.nix;
-  };
-  services.skhd = {
-    enable = true;
-    package = pkgs.skhd;
-    skhdConfig = "shift + alt - f : firefox";
+  fonts = { 
+    fontDir.enable = true;
+    fonts = [ pkgs.nerdfonts ]; 
   };
 
-  # Auto upgrade nix package and the daemon service.
-  nix.package = pkgs.nixUnstable;
-  services.nix-daemon.enable = true;
+  services = { 
+    # menu bar replacement
+    spacebar = {
+      enable = true;
+      package = pkgs.spacebar;
+      config = import ./configs/spacebar.nix;
+    };
+    # window manager
+    yabai = {
+      enable = true;
+      package = pkgs.yabai;
+      enableScriptingAddition = true;
+      config = import ./configs/yabai.nix;
+    };
+    # keybinds daemon
+    skhd = {
+      enable = true;
+      package = pkgs.skhd;
+      skhdConfig = builtins.concatStringsSep "\n" (import ./configs/skhd.nix);
+    }; 
 
-  environment.variables = {
-    ZVM_INIT_MODE = "sourcing";
-    XDG_CONFIG_HOME = "~/.config";
+    nix-daemon.enable = true;
+  };
+
+  nix = {
+    package = pkgs.nixUnstable; 
+    extraOptions.experimental-features = "nix-command \n flakes";
+  };
+
+  environment = { 
+    variables = {
+      ZVM_INIT_MODE = "sourcing";
+      XDG_CONFIG_HOME = "~/.config";
+    }; 
   };
 
   users.users.drawer = {
@@ -87,11 +102,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.zsh.enable = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # launch agents
-  # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 }
