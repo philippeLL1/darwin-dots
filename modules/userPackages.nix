@@ -35,18 +35,13 @@ pkgs: with pkgs; [
   bat-extras.batgrep
   bat-extras.batpipe
   zoxide
-  onefetch
-  imagemagick
   pandoc
   gum
   fasd
   ion
   bitwarden-cli
   xonsh
-  mods
-  ghostscript
-  lima
-  uair
+  github-cli 
 
   # lsp
   haskell-language-server
