@@ -23,5 +23,8 @@
     spacebar
     yabai
     skhd
+
+    # apps
+
   ];
 }

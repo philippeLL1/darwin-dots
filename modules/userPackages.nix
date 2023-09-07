@@ -45,6 +45,8 @@ pkgs: with pkgs; [
   xonsh
   mods
   ghostscript
+  lima
+  uair
 
   # lsp
   haskell-language-server
@@ -56,7 +58,7 @@ pkgs: with pkgs; [
   lua
   go
   cmake
-  ghc
+  (ghc.withPackages(ps: with ps; [ cassava ]))
   direnv
   nix-direnv
   git
@@ -71,7 +73,6 @@ pkgs: with pkgs; [
   vhs
   coursier
   metals
-
 
   # theming
   starship

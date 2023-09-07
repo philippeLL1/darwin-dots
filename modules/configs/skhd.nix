@@ -1,4 +1,6 @@
-[
-  "alt - t : yabai -m window --toggle float"
-  "alt - \"space\" : floodlight"
-]
+''
+  lalt - t : yabai -m window --toggle float
+  lalt - return : open ~/Applications/Home Manager Apps/WezTerm.app/
+  lalt - l : yabai -m space --focus next
+  lalt - h : yabai -m space --focus prev
+''

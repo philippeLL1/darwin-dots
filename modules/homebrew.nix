@@ -24,5 +24,9 @@
     "utm"
     "steam"
     "clion"
+    "obsidian"
+    "calibre"
+    "docker"
+    "jupyterlab"
   ];
 }
