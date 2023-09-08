@@ -6,6 +6,5 @@
   initExtra         = '' 
     eval "$(starship init bash)" 
     eval "$(zoxide init bash)"
-    export PATH=$PATH:/Users/drawer/.scripts/bin
-  '';
+ '';
 }
