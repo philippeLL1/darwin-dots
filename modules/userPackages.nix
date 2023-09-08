@@ -42,6 +42,7 @@ pkgs: with pkgs; [
   bitwarden-cli
   xonsh
   github-cli 
+  tectonic
 
   # lsp
   haskell-language-server

@@ -61,7 +61,8 @@ in
 
   # PATH
   home.sessionPath = [
-    "$HOME/.scripts/bin/"
+    "$HOME/scripts/bin/"
+    "$HOME/.jamtools/"
   ];
 
   programs.tmux.enable = true;
