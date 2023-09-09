@@ -98,7 +98,11 @@
   users.users.drawer = {
     name = "drawer";
     home = "/Users/drawer/";
+    shell = pkgs.bash;
   };
+
+  programs.zsh.enable = true;
+  programs.bash.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

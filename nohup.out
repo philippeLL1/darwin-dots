@@ -1,3 +1,0 @@
-Error: filesystem error: in posix_stat: failed to determine attributes for the specified path: Permission denied ["/usr/sbin/weakpass_edit"]. Could not read file: "/usr/sbin/weakpass_edit"
-2023-09-07 15:39:13.027 Light[30150:524657] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
-w
