@@ -77,7 +77,6 @@
     skhd = {
       enable = true;
       package = pkgs.skhd;
-      # skhdConfig = builtins.concatStringsSep "\n" (import ./configs/skhd.nix);
       skhdConfig = import ./configs/skhd.nix;
     }; 
 

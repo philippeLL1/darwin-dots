@@ -51,6 +51,7 @@ in
   home.sessionVariables = {
     EDITOR = "nvim";
     XDG_CONFIG_HOME = "/Users/drawer/.config/";
+    ABCD = "hello";
 
     # Nap styling (snippet manager)
     NAP_BACKGROUND = "0";
