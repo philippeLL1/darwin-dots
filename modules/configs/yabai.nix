@@ -15,8 +15,7 @@
   mouse_action1 = "move";
   mouse_action2 = "resize";
   layout = "bsp";
-  external_bar = "all:24:0";
-  top_padding = 2;
+  top_padding = 26;
   bottom_padding = 2;
   left_padding = 2;
   right_padding = 2;
