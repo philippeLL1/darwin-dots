@@ -43,6 +43,9 @@ pkgs: with pkgs; [
   xonsh
   github-cli 
   tectonic
+  tetex
+  entr
+  thefuck
 
   # lsp
   haskell-language-server

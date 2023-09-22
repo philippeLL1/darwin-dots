@@ -28,5 +28,6 @@
     "calibre"
     "docker"
     "jupyterlab"
+    "dbeaver-community"
   ];
 }
