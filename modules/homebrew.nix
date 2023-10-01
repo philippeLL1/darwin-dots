@@ -2,7 +2,7 @@
   enable = true;
 
   # Updates homebrew on activation, but can make darwin-rebuild much slower:
-  # onActivation.autoUpdate = true;
+  onActivation.autoUpdate = true;
 
   brews = [
     "jp2a"
@@ -14,9 +14,7 @@
     "karabiner-elements"
     "firefox"
     "reaper"
-    "launchcontrol"
     "google-chrome"
-    "thunderbird"
     "gimp"
     "vlc"
     "native-access"
@@ -24,10 +22,9 @@
     "utm"
     "steam"
     "clion"
-    "obsidian"
     "calibre"
     "docker"
     "jupyterlab"
-    "dbeaver-community"
+    "wezterm"
   ];
 }

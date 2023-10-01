@@ -27,7 +27,7 @@ config.window_padding = {
 config.default_cursor_style = 'BlinkingBar'
 
 -- font 
-config.font_size = 14.0
+config.font_size = 18.0
 
 -- colors
 config.color_scheme = 'Monokai Pro Ristretto (Gogh)'
@@ -56,4 +56,5 @@ config.unix_domains = {
 }
 config.default_gui_startup_args = { 'connect', 'unix' }
 
+config.color_scheme = 'Decaf (base16)'
 return config

@@ -74,12 +74,12 @@
       config = import ./configs/yabai.nix;
     };
     # keybinds daemon
-    skhd = {
-      enable = true;
-      package = pkgs.skhd;
-      skhdConfig = import ./configs/skhd.nix;
-    }; 
-
+    # skhd = {
+    #   enable = true;
+    #   package = pkgs.skhd;
+    #   skhdConfig = import ./configs/skhd.nix;
+    # }; 
+    #
     nix-daemon.enable = true;
   };
 

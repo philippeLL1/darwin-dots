@@ -3,7 +3,6 @@ pkgs: with pkgs; [
   kitty
   kitty-themes
   karabiner-elements
-  wezterm
   vscodium
   sketchybar
   zathura
